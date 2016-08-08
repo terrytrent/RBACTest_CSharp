@@ -14,7 +14,7 @@ namespace RBAC.Biz
         private bool writePermission;
         private bool createPermission;
         private bool deletePermission;
-        private Dictionary<string, User> simulatedUsers = new Dictionary<string, User>();
+        private Dictionary<string, User> simulatedUsers;
 
         public User ActiveUser
         {
@@ -55,7 +55,7 @@ namespace RBAC.Biz
 
         public Dictionary<string, User> SimulatedUsers
         {
-            get { return simulatedUsers; }
+            get{ return simulatedUsers; }
             set { simulatedUsers = value; }
         }
 
@@ -66,6 +66,7 @@ namespace RBAC.Biz
 
         private void populateSimulatedLogins()
         {
+            simulatedUsers = new Dictionary<string, User>();
             SimulatedUsers.Add("ttrent", new User("ttrent", (UserRights.rights)15));
             SimulatedUsers.Add("jjoe", new User("jjoe", UserRights.rights.ReadOnly));
             SimulatedUsers.Add("bbrian", new User("bbrian", UserRights.rights.ReadWrite));
