@@ -18,7 +18,14 @@ namespace RBAC.Biz
 
         public User ActiveUser
         {
-            get { return activeUser; }
+            get
+            {
+                if (activeUser == null)
+                {
+                    activeUser = new User();
+                }
+                return activeUser;
+            }
             set
             {
                 activeUser = value;
