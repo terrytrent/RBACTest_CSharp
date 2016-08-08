@@ -21,17 +21,17 @@ namespace RBACTest_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        User activeUser = new User();
+        //User activeUser = new User();
 
-        User terry = new User("ttrent", (userRights.rights)15);
-        User joe = new User("jjoe", userRights.rights.ReadOnly);
-        User brian = new User("bbrian", userRights.rights.ReadWrite);
-        User chris = new User("cchris", userRights.rights.none);
+        //User terry = new User("ttrent", (userRights.rights)15);
+        //User joe = new User("jjoe", userRights.rights.ReadOnly);
+        //User brian = new User("bbrian", userRights.rights.ReadWrite);
+        //User chris = new User("cchris", userRights.rights.none);
 
-        private bool readPermission;
-        private bool writePermission;
-        private bool deletePermission;
-        private bool createPermission;
+        //private bool readPermission;
+        //private bool writePermission;
+        //private bool deletePermission;
+        //private bool createPermission;
 
         public MainWindow()
         {
@@ -42,10 +42,10 @@ namespace RBACTest_WPF
         private void populateDropDown()
         {
             List<string> users = new List<string>();
-            users.Add(terry.getUsername());
-            users.Add(joe.getUsername());
-            users.Add(brian.getUsername());
-            users.Add(chris.getUsername());
+            users.Add(terry.Username);
+            users.Add(joe.Username);
+            users.Add(brian.Username);
+            users.Add(chris.Username);
 
             comboBox.ItemsSource = users;
         }
@@ -62,12 +62,12 @@ namespace RBACTest_WPF
             string item = (string) comboBox.SelectedItem;
             activeUser = users[item];
 
-            int activeUserRights = userRights.getRightsNumericvalue(activeUser.getRights());
+            int activeUserRights = userRights.getRightsNumericvalue(activeUser.Rights);
 
-            readPermission = userRights.checkRights(userRights.rights.read, activeUser.getRights());
-            writePermission = userRights.checkRights(userRights.rights.write, activeUser.getRights());
-            createPermission = userRights.checkRights(userRights.rights.create, activeUser.getRights());
-            deletePermission = userRights.checkRights(userRights.rights.delete, activeUser.getRights());
+            readPermission = userRights.checkRights(userRights.rights.read, activeUser.Rights);
+            writePermission = userRights.checkRights(userRights.rights.write, activeUser.Rights);
+            createPermission = userRights.checkRights(userRights.rights.create, activeUser.Rights);
+            deletePermission = userRights.checkRights(userRights.rights.delete, activeUser.Rights);
 
             setLabelcontent(ReadResults, readPermission.ToString());
             setLabelcontent(WriteResults, writePermission.ToString());
@@ -75,10 +75,10 @@ namespace RBACTest_WPF
             setLabelcontent(DeleteResults, deletePermission.ToString());
             setLabelcontent(enumLabel, activeUserRights.ToString());
 
-            //enableButton(readPermission, viewAllButton);
-            //enableButton(writePermission, editSelectedButton);
-            //enableButton(createPermission, createNewButton);
-            //enableButton(deletePermission, deleteSelectedButton);
+            enableButton(readPermission, viewAllButton);
+            enableButton(writePermission, editSelectedButton);
+            enableButton(createPermission, createNewButton);
+            enableButton(deletePermission, deleteSelectedButton);
 
 
         }

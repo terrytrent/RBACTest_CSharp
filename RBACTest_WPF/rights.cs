@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RBACTest_WPF
 {
-    public class userRights
+    public static class userRights
     {
         [Flags]
         public enum rights

@@ -1,0 +1,33 @@
+﻿<Window x:Class="RBAC.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RBAC.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250.667" Width="525">
+    <Grid>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="54,48,0,0" VerticalAlignment="Top" Height="133" Width="232"/>
+        <Button x:Name="deleteSelectedButton" Content="Delete Selected" HorizontalAlignment="Left" Margin="432,192,0,0" VerticalAlignment="Top" Width="75" FontSize="9.333" Click="deleteSelectedButton_Click"/>
+        <Button x:Name="viewAllButton" Content="View All" HorizontalAlignment="Left" Margin="10,192,0,0" VerticalAlignment="Top" Width="75" FontSize="9.333" Click="viewAllButton_Click"/>
+        <Button x:Name="editSelectedButton" Content="Edit Selected" HorizontalAlignment="Left" Margin="286,192,0,0" VerticalAlignment="Top" Width="75" FontSize="9.333" Click="editSelectedButton_Click"/>
+        <Button x:Name="createNewButton" Content="Create New" HorizontalAlignment="Left" Margin="155,192,0,0" VerticalAlignment="Top" Width="75" FontSize="9.333" Click="createNewButton_Click"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="54,14,0,0" VerticalAlignment="Top" Width="139" SelectionChanged="comboBox_SelectionChanged"/>
+        <Label x:Name="label" Content="User:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Border Margin="286,41,37,39">
+            <Grid Margin="26,0,-26,0">
+                <Label x:Name="Read" Content="Read: " HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.193,-0.244" Width="57"/>
+                <Label x:Name="ReadResults" Content="ReadResults" HorizontalAlignment="Left" Margin="62,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.193,-0.244" Width="132"/>
+                <Label x:Name="Write" Content="Write:" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.193,-0.244" Width="57"/>
+                <Label x:Name="WriteResults" Content="WriteResults" HorizontalAlignment="Left" Margin="62,31,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.193,-0.244" Width="132"/>
+                <Label x:Name="Create" Content="Create: " HorizontalAlignment="Left" Margin="0,62,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.193,-0.244" Width="57"/>
+                <Label x:Name="CreateResults" Content="CreateResults" HorizontalAlignment="Left" Margin="62,62,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.193,-0.244" Width="132"/>
+                <Label x:Name="Delete" Content="Delete:" HorizontalAlignment="Left" Margin="0,93,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.193,-0.244" Width="57"/>
+                <Label x:Name="DeleteResults" Content="DeleteResults" HorizontalAlignment="Left" Margin="62,93,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.193,-0.244" Width="132"/>
+
+            </Grid>
+        </Border>
+        <Label x:Name="enumLabel" Content="enum" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.193,-0.244" Width="194" Margin="313,10,0,0"/>
+
+    </Grid>
+</Window>

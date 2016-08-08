@@ -14,32 +14,22 @@ namespace RBACTest_WPF
         public User()
         { }
 
-        public User(string providedUsername, userRights.rights providedRights)
+        public User(string username, userRights.rights rights)
         {
-            setUsername(providedUsername);
-            setRights(providedRights);
+            Username = username;
+            Rights = rights;
         }
 
-        public void setUsername(string providedUsername)
+        public userRights.rights Rights
         {
-            username = providedUsername;
+            get { return rights; }
+            set { rights = value; }
         }
 
-        public string getUsername()
+        public string Username
         {
-            return username;
+            get { return username; }
+            set { username = value; }
         }
-
-        public void setRights(userRights.rights providedRights)
-        {
-            rights = providedRights;
-        }
-
-        public userRights.rights getRights()
-        {
-            return rights;
-        }
-        
-
     }
 }
