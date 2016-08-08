@@ -14,12 +14,19 @@ namespace RBAC.Biz
         private bool writePermission;
         private bool createPermission;
         private bool deletePermission;
-        private Dictionary<string,User> simulatedUsers = new Dictionary<string, User>();
+        private Dictionary<string, User> simulatedUsers = new Dictionary<string, User>();
 
         public User ActiveUser
         {
             get { return activeUser; }
-            set { activeUser = value; }
+            set
+            {
+                activeUser = value;
+                ReadPermission = UserRights.checkRights(UserRights.rights.read, ActiveUser.Rights);
+                WritePermission = UserRights.checkRights(UserRights.rights.write, ActiveUser.Rights);
+                CreatePermission = UserRights.checkRights(UserRights.rights.create, ActiveUser.Rights);
+                DeletePermission = UserRights.checkRights(UserRights.rights.delete, ActiveUser.Rights);
+            }
         }
 
         public bool ReadPermission
@@ -59,10 +66,10 @@ namespace RBAC.Biz
 
         private void populateSimulatedLogins()
         {
-            SimulatedUsers.Add("terry", new User("ttrent", (UserRights.rights)15));
-            SimulatedUsers.Add("joe", new User("jjoe", UserRights.rights.ReadOnly));
-            SimulatedUsers.Add("brian", new User("bbrian", UserRights.rights.ReadWrite));
-            SimulatedUsers.Add("chris", new User("cchris", UserRights.rights.none));
+            SimulatedUsers.Add("ttrent", new User("ttrent", (UserRights.rights)15));
+            SimulatedUsers.Add("jjoe", new User("jjoe", UserRights.rights.ReadOnly));
+            SimulatedUsers.Add("bbrian", new User("bbrian", UserRights.rights.ReadWrite));
+            SimulatedUsers.Add("cchris", new User("cchris", UserRights.rights.none));
         }
 
     }

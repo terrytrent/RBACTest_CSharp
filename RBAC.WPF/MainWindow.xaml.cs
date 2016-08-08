@@ -32,7 +32,21 @@ namespace RBAC.WPF
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            string item = (string)comboBox.SelectedItem;
+            simulatedLogin.ActiveUser = simulatedLogin.SimulatedUsers[item];
 
+            int activeUserRights = UserRights.getRightsNumericvalue(simulatedLogin.ActiveUser.Rights);
+
+            setLabelcontent(ReadResults, simulatedLogin.ReadPermission.ToString());
+            setLabelcontent(WriteResults, simulatedLogin.WritePermission.ToString());
+            setLabelcontent(CreateResults, simulatedLogin.CreatePermission.ToString());
+            setLabelcontent(DeleteResults, simulatedLogin.DeletePermission.ToString());
+            setLabelcontent(enumLabel, activeUserRights.ToString());
+
+            enableButton(simulatedLogin.ReadPermission, viewAllButton);
+            enableButton(simulatedLogin.WritePermission, editSelectedButton);
+            enableButton(simulatedLogin.CreatePermission, createNewButton);
+            enableButton(simulatedLogin.DeletePermission, deleteSelectedButton);
         }
 
         private void viewAllButton_Click(object sender, RoutedEventArgs e)
@@ -58,9 +72,10 @@ namespace RBAC.WPF
         private void populateDropDown()
         {
             List<string> users = new List<string>();
-            foreach (KeyValuePair<string, User> userDictionary in simulatedLogin.SimulatedUsers)
+
+            foreach (KeyValuePair<string, User> User in simulatedLogin.SimulatedUsers)
             {
-                User user = userDictionary.Value;
+                User user = User.Value;
                 users.Add(user.Username);
             }
 

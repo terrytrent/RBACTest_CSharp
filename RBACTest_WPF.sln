@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBACTest_WPF", "RBACTest_WPF\RBACTest_WPF.csproj", "{089645E5-3314-4CEE-952D-C2D86BF16058}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBACTest_WPFTests", "RBACTest_WPFTests\RBACTest_WPFTests.csproj", "{C1021AE6-DAC7-43A1-975A-5817D92438D7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7D56948C-2543-49F4-B723-61A8A523A532}"
 EndProject
@@ -18,6 +16,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBAC.Biz", "RBAC.Biz\RBAC.B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBAC.Common", "RBAC.Common\RBAC.Common.csproj", "{19C00525-BDC2-48B6-881B-8A567022A8BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBAC.CommonTests", "RBAC.CommonTests\RBAC.CommonTests.csproj", "{99778F48-7BC6-4163-BED9-8ADBCD4D40E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBAC.BizTests", "RBAC.BizTests\RBAC.BizTests.csproj", "{EF88EA3E-5939-43F9-B2F1-8A7F89B39D05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,10 +30,6 @@ Global
 		{089645E5-3314-4CEE-952D-C2D86BF16058}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{089645E5-3314-4CEE-952D-C2D86BF16058}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{089645E5-3314-4CEE-952D-C2D86BF16058}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C1021AE6-DAC7-43A1-975A-5817D92438D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1021AE6-DAC7-43A1-975A-5817D92438D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1021AE6-DAC7-43A1-975A-5817D92438D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1021AE6-DAC7-43A1-975A-5817D92438D7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E5F4E3B9-8997-4AE2-AFC7-91B8402076EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E5F4E3B9-8997-4AE2-AFC7-91B8402076EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5F4E3B9-8997-4AE2-AFC7-91B8402076EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -44,11 +42,20 @@ Global
 		{19C00525-BDC2-48B6-881B-8A567022A8BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19C00525-BDC2-48B6-881B-8A567022A8BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19C00525-BDC2-48B6-881B-8A567022A8BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99778F48-7BC6-4163-BED9-8ADBCD4D40E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99778F48-7BC6-4163-BED9-8ADBCD4D40E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99778F48-7BC6-4163-BED9-8ADBCD4D40E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99778F48-7BC6-4163-BED9-8ADBCD4D40E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF88EA3E-5939-43F9-B2F1-8A7F89B39D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF88EA3E-5939-43F9-B2F1-8A7F89B39D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF88EA3E-5939-43F9-B2F1-8A7F89B39D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF88EA3E-5939-43F9-B2F1-8A7F89B39D05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C1021AE6-DAC7-43A1-975A-5817D92438D7} = {7D56948C-2543-49F4-B723-61A8A523A532}
+		{99778F48-7BC6-4163-BED9-8ADBCD4D40E5} = {7D56948C-2543-49F4-B723-61A8A523A532}
+		{EF88EA3E-5939-43F9-B2F1-8A7F89B39D05} = {7D56948C-2543-49F4-B723-61A8A523A532}
 	EndGlobalSection
 EndGlobal

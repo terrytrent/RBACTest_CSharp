@@ -21,17 +21,17 @@ namespace RBACTest_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        //User activeUser = new User();
+        User activeUser = new User();
 
-        //User terry = new User("ttrent", (userRights.rights)15);
-        //User joe = new User("jjoe", userRights.rights.ReadOnly);
-        //User brian = new User("bbrian", userRights.rights.ReadWrite);
-        //User chris = new User("cchris", userRights.rights.none);
+        User terry = new User("ttrent", (userRights.rights)15);
+        User joe = new User("jjoe", userRights.rights.ReadOnly);
+        User brian = new User("bbrian", userRights.rights.ReadWrite);
+        User chris = new User("cchris", userRights.rights.none);
 
-        //private bool readPermission;
-        //private bool writePermission;
-        //private bool deletePermission;
-        //private bool createPermission;
+        private bool readPermission;
+        private bool writePermission;
+        private bool deletePermission;
+        private bool createPermission;
 
         public MainWindow()
         {
